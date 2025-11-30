@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Security AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🛡️ ATM Threat Detection</h1>
+        <p>Upload acoustic data to detect drilling or sawing attacks.</p>
+
+        <div class="upload-box">
+            <input type="file" id="audioInput" accept=".wav,.mp3">
+            <label for="audioInput">Choose Audio File</label>
+            <span id="fileName">No file chosen</span>
+        </div>
+
+        <button onclick="analyzeAudio()" id="scanBtn">Analyze Audio</button>
+
+        <div id="loading" class="hidden">Processing...</div>
+
+        <div id="resultCard" class="hidden">
+            <h2 id="resultTitle">--</h2>
+            <p>Confidence: <span id="confidenceScore">0%</span></p>
+            <p id="actionItem">--</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
